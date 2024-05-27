@@ -41,3 +41,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.9"
 gem 'devise-jwt'
+
+gem "rails_admin", "~> 3.1"
+gem 'sassc-rails'

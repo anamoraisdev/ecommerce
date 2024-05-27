@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
  delete '/users/sign_out', to: 'sessions#destroy'
   
   # Outras rotas do Devise usando os controllers padrão
