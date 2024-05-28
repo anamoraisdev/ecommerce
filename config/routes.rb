@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  devise_for :admins
+  mount RailsAdmin::Engine => '/panel', as: 'rails_admin'
+
  delete '/users/sign_out', to: 'sessions#destroy'
   
   # Outras rotas do Devise usando os controllers padrão
@@ -15,6 +18,7 @@ Rails.application.routes.draw do
   as :user do
     post '/users', to: 'devise/registrations#create'      # Criação de usuário
   end
+  
   resources :products
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
